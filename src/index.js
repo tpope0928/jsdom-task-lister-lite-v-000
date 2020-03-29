@@ -5,5 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const newTaskList = document.getElementById("tasks");
 
+  newTaskForm.addEventListener("submit", createNewTask);
 
 });
