@@ -8,3 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
   newTaskForm.addEventListener("submit", createNewTask);
 
 });
+
+const createNewTask = event => {
+  event.preventDefault();
+
+  const newTaskDes = document.getElementById("new-task-description");
+  const newTaskItem = document.createElement("li");
+  newTaskItem.innerText = newTaskDes.value;
+
+  appendNewTaskItem(newTaskItem);
+  event.target.reset();
+};
